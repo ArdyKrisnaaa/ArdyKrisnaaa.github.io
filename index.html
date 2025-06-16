@@ -5,86 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ardhya Krisna</title>
   <style>
-    * {
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      height: 100vh;
-      background: linear-gradient(to right, #000000, #1a1a1a);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 100%;
+      overflow: hidden;
       font-family: 'Segoe UI', sans-serif;
       color: white;
-      overflow: hidden;
+    }
+
+    body {
+      background: black;
+      display: flex;
       flex-direction: column;
-    }
-    .content {
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      position: relative;
     }
+
+    .fog {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+      z-index: -1;
+    }
+
     .name {
       font-size: 3rem;
       font-weight: bold;
       color: #00ffcc;
-      margin-bottom: 20px;
-    }
-    .typewriter {
-      font-size: 1.5rem;
-      border-right: .15em solid #00ffcc;
-      white-space: nowrap;
-      overflow: hidden;
-      animation:
-        typing 4s steps(30, end),
-        blink-caret .75s step-end infinite;
-      margin-bottom: 30px;
+      text-shadow: 2px 2px 10px #000;
     }
 
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
+    .desc {
+      font-size: 1.4rem;
+      margin-top: 10px;
+      text-shadow: 1px 1px 5px #000;
     }
 
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: #00ffcc; }
+    .buttons {
+      margin-top: 30px;
     }
 
-    .social-links a {
+    .buttons a {
       display: inline-block;
-      margin: 0 15px;
-      padding: 10px 20px;
-      background-color: #00ffcc;
-      color: #000;
+      margin: 0 10px;
+      padding: 12px 20px;
+      background-color: rgba(0, 255, 204, 0.8);
+      color: black;
       text-decoration: none;
-      border-radius: 25px;
-      transition: background 0.3s ease;
+      border-radius: 30px;
       font-weight: bold;
+      transition: background 0.3s ease;
     }
 
-    .social-links a:hover {
+    .buttons a:hover {
       background-color: #00bba3;
     }
 
     audio {
-      display: none;
+      margin-top: 20px;
+      filter: drop-shadow(0 0 5px #00ffc3);
     }
   </style>
 </head>
 <body>
-  <div class="content">
-    <div class="name">Ardhya Krisna</div>
-    <div class="typewriter">Welkam di website gwejhh bro</div>
-    <div class="social-links">
-      <a href="https://instagram.com/ardya_krisna" target="_blank">Instagram</a>
-      <a href="https://wa.me/62895330062459" target="_blank">WhatsApp</a>
-    </div>
+  <!-- Background Video Kabut -->
+  <video autoplay muted loop class="fog">
+    <source src="https://files.catbox.moe/d0f4z7.mp4" type="video/mp4">
+    Background tidak didukung browser Anda.
+  </video>
+
+  <div class="name">Ardhya Krisna</div>
+  <div class="desc">Welkom di website gwejhh bro!</div>
+
+  <div class="buttons">
+    <a href="https://instagram.com/ardya_krisna" target="_blank">Instagram</a>
+    <a href="https://wa.me/62895330062459" target="_blank">WhatsApp</a>
   </div>
 
-  <!-- Musik Latar Cry - Cas (Link YouTube MP3 direct) -->
-  <audio autoplay loop>
-    <source src="https://files.catbox.moe/n5kwh5.mp3" type="audio/mpeg" />
+  <audio controls autoplay loop>
+    <source src="https://files.catbox.moe/mbscac.mp3" type="audio/mpeg">
     Browser kamu tidak mendukung audio.
   </audio>
 </body>
