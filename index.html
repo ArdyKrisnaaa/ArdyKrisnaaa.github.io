@@ -34,6 +34,11 @@
       border-radius: 25px;
       cursor: pointer;
       font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #00d4b0;
     }
 
     video#bg-video {
@@ -54,13 +59,15 @@
 </head>
 <body>
 
+  <!-- Background Video -->
   <video id="bg-video" autoplay loop muted>
     <source src="Smoke 7 40S 4K Res.mp4" type="video/mp4">
   </video>
 
   <h1>Ardhya Krisna</h1>
-  <p>Welkam di website gwehjh bro</p>
+  <p>Welkam di web gwejjh brokk</p>
 
+  <!-- Tombol Sosial Media -->
   <div>
     <a href="https://instagram.com/ardya_krisna" target="_blank">
       <button class="button">Instagram</button>
@@ -70,12 +77,26 @@
     </a>
   </div>
 
+  <!-- Music -->
   <div class="music-player">
-    <audio controls autoplay loop>
-      <source src="Cry - Cigarettes After Sex.mp3" type="audio/mpeg">
-      Browsermu tidak mendukung audio.
+    <audio id="bgm" autoplay loop controls>
+      <source src="https://ardykrisnaaa.github.io/Cry%20-%20Cigarettes%20After%20Sex.mp3" type="audio/mpeg">
+      Lagu tidak dapat diputar di browsermu.
     </audio>
   </div>
+
+  <!-- Autoplay Fix (silent mode browser) -->
+  <script>
+    window.addEventListener('load', function () {
+      var music = document.getElementById("bgm");
+      var playPromise = music.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(function (error) {
+          console.log("Autoplay diblokir, silakan play manual.");
+        });
+      }
+    });
+  </script>
 
 </body>
 </html>
