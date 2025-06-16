@@ -1,10 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Selamat Datang</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ardhya Krisna</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      background: linear-gradient(to right, #000000, #1a1a1a);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      overflow: hidden;
+      flex-direction: column;
+    }
+    .content {
+      text-align: center;
+    }
+    .name {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #00ffcc;
+      margin-bottom: 20px;
+    }
+    .typewriter {
+      font-size: 1.5rem;
+      border-right: .15em solid #00ffcc;
+      white-space: nowrap;
+      overflow: hidden;
+      animation:
+        typing 4s steps(30, end),
+        blink-caret .75s step-end infinite;
+      margin-bottom: 30px;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #00ffcc; }
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 15px;
+      padding: 10px 20px;
+      background-color: #00ffcc;
+      color: #000;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+      font-weight: bold;
+    }
+
+    .social-links a:hover {
+      background-color: #00bba3;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Halo Dunia!</h1>
-  <p>Website pertamaku dari GitHub Pages</p>
+  <div class="content">
+    <div class="name">Ardhya Krisna</div>
+    <div class="typewriter">Selamat datang di website pribadiku!</div>
+    <div class="social-links">
+      <a href="https://instagram.com/ardya_krisna" target="_blank">Instagram</a>
+      <a href="https://wa.me/62895330062459" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Musik Latar Cry - Cas (Link YouTube MP3 direct) -->
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/n5kwh5.mp3" type="audio/mpeg" />
+    Browser kamu tidak mendukung audio.
+  </audio>
 </body>
 </html>
