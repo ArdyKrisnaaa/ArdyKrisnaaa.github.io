@@ -2,96 +2,80 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ardhya Krisna</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: #000;
-      color: #00ffc8;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #00f5d4;
+      text-align: center;
+      background-color: #000;
       overflow: hidden;
     }
 
     h1 {
-      font-size: 3rem;
-      margin: 0;
+      margin-top: 20vh;
+      font-size: 3em;
+      font-weight: bold;
     }
 
     p {
-      margin-top: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.2em;
+      color: #ccc;
     }
 
-    .buttons {
-      margin-top: 2rem;
-    }
-
-    .buttons a {
-      text-decoration: none;
-      background: #00ffc8;
-      color: #000;
+    .button {
+      background-color: #00f5d4;
+      border: none;
+      color: black;
       padding: 10px 20px;
+      margin: 10px;
       border-radius: 25px;
-      margin: 0 10px;
+      cursor: pointer;
       font-weight: bold;
-      transition: 0.3s;
     }
 
-    .buttons a:hover {
-      background: #00c2a8;
-    }
-
-    #bg-video {
+    video#bg-video {
       position: fixed;
       top: 0;
       left: 0;
-      min-width: 100vw;
-      min-height: 100vh;
-      z-index: -1;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      opacity: 0.25;
+      opacity: 0.2;
+      z-index: -1;
     }
 
-    #music-control {
-      position: absolute;
-      bottom: 30px;
-      color: white;
-      font-size: 0.9rem;
-    }
-
-    audio {
-      display: none;
+    .music-player {
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
 
   <video id="bg-video" autoplay loop muted>
-    <source src="Smoke 7 405 4K Res.mp4" type="video/mp4" />
+    <source src="Smoke 7 40S 4K Res.mp4" type="video/mp4">
   </video>
 
   <h1>Ardhya Krisna</h1>
-  <p>Welkam di website gwejhh brok</p>
+  <p>Welkam di website gwehjh bro</p>
 
-  <div class="buttons">
-    <a href="https://instagram.com/USERNAMEKAMU" target="_blank">Instagram</a>
-    <a href="https://wa.me/NOMORWA" target="_blank">WhatsApp</a>
+  <div>
+    <a href="https://instagram.com/ardya_krisna" target="_blank">
+      <button class="button">Instagram</button>
+    </a>
+    <a href="https://wa.me/62895330062459" target="_blank">
+      <button class="button">WhatsApp</button>
+    </a>
   </div>
 
-  <div id="music-control">
-    Memutar: Cry - Cigarettes After Sex 🎶
+  <div class="music-player">
+    <audio controls autoplay loop>
+      <source src="Cry - Cigarettes After Sex.mp3" type="audio/mpeg">
+      Browsermu tidak mendukung audio.
+    </audio>
   </div>
-
-  <audio autoplay loop>
-    <source src="Cry - Cigarettes After Sex.mp3" type="audio/mpeg" />
-  </audio>
 
 </body>
 </html>
